@@ -11,3 +11,25 @@
  *= require_self
  *= require_tree .
 */
+
+#body {
+  margin-top: 20px;
+}
+
+#user-bar {
+  margin-bottom: -10px;
+  float: right;
+}
+
+.tweet-area {
+  width: 100%;
+  height: 100px;
+}
+
+.tweet-btn {
+  margin-bottom: 10px;
+}
+
+.app-form {
+  margin-left: 100px;
+}

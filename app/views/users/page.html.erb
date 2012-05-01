@@ -1,0 +1,12 @@
+<div id="user-page">
+  <h1><%= @user.username %></h1>
+  <hr />
+  <div class="tweet-btn">
+    <%= link_to("New Tweet", "#{@user.home_page}/new", :class => "btn") %>
+  </div>
+  <ul id="tweets">
+  <% for each in @tweets %>
+    <li><%= each.content %></li>
+  <% end %>
+  </ul>
+</div>

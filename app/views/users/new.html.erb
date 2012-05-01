@@ -1,9 +1,15 @@
+<h1>New User</h1>
+<hr />
+<div class="app-form">
 <%= form_tag("/users", :controller => "users", :method => "post") do %>
-  <%= label_tag(:user, "Username") %>
-  <%= text_field_tag(:user) %>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:username, "Username") %>
+  <%= text_field_tag(:username) %>
   <%= label_tag(:password, "Password") %>
   <%= password_field_tag(:password) %>
   <%= label_tag(:password_conf, "Password Confirmation") %>
   <%= password_field_tag(:password_conf) %>
   <%= submit_tag("Register", :class => "btn") %>
 <% end %>
+</div>

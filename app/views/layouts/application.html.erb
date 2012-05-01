@@ -7,7 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-    <div class="container">
+    <div id="body" class="container">
+      <div id="flash">
+        <% for key, value in flash %>
+          <div class="alert alert-error"> <%= value %> </div>
+        <% end %>
+      </div>
+      <% if logged_in? %>
+      <div id="user-bar">
+        Hello, <%= current_user.name %> | <%= link_to("Logout", "/logout") %>
+      </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>

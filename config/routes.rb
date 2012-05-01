@@ -57,7 +57,29 @@ TwitterClone::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'application#welcome'
   
+  match "/@/:username" => "users#page", :via => "GET"
+  
+  match "/login" => "application#login", :via => "GET"
+  
+  match "/login" => "application#login", :via => "POST"
+  
+  match "/logout" => "application#logout", :via => "GET"
+  
   match '/users/new' => "users#new", :via => "GET"
   
-  match "/:username/:id" => "tweets#show", :via => "GET"
+  match "/users/:id" => "users#create", :via => "GET"
+  
+  match "/users" => "users#create", :via => "POST"
+  
+  match "/users/:id" => "users#update", :via => "PUT"
+  
+  match "/users/:id" => "users#delete", :via => "DELETE"
+  
+  match "/@/:username/new" => "tweets#new", :via => "GET"
+  
+  match "/@/:username/:id" => "tweets#show", :via => "GET"
+  
+  match "/@/:username" => "tweets#create", :vai => "POST"
+  
+  
 end

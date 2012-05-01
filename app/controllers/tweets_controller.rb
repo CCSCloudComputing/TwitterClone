@@ -1,5 +1,11 @@
 class TweetsController < ApplicationController
+  def new
+  end
+  
   def create
+    tweet = Tweet.new(:content => params[:content], :user_id => current_user.id)
+    tweet.save
+    redirect_to current_user.home_page
   end
   
   def show

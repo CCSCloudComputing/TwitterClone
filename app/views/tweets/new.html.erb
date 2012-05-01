@@ -1,0 +1,9 @@
+<h1>Tweet Something</h1>
+<hr />
+<%= form_tag("/@/#{current_user.username}", :controller => "tweets", :method => "post") do %>
+  <%= text_area_tag(:content, "", :class => "tweet-area") %>
+  <div>
+  <%= submit_tag("TweetIt", :class => "btn") %>
+  </div>
+<% end %>
+
